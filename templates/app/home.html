@@ -1,0 +1,32 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> {% endcomment %}
+    <link rel='stylesheet' href="{% static 'css/main.css'%}" >
+    
+    <title>Hello, modularity!</title>
+  </head>
+  <body>
+    
+  <h1>{{company}}</h1>
+  <img src="{% static 'image/raj.jpg.JPG' %}" id=image>
+    <h1>{{onername}}</h1>
+    {% for i in car%}
+    <h1>{{forloop.counter0}} {{i}}</h1>
+    {% endfor %}
+    
+    {% if car|length < 3 %}
+    <h1>condition is true</h1>
+      {% else %}
+      <h1>condition is false</h1>
+
+    {% endif %}
+      
+      
+  
+  </body>
+</html>
